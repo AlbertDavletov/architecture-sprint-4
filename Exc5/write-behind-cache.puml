@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+MES -> Cache: (1) Get orders with "NEW" status
+Cache -> MES: (2) Send orders with "NEW" status
+
+MES -> Cache: (3) Add another order with "NEW" status
+Cache -> Database: (4) Add another order with "NEW" status
+
+MES -> Cache: (5) Change order with "NEW" status
+Cache -> Database: (6) Change order with "NEW" status
+@enduml
